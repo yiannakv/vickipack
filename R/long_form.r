@@ -4,16 +4,20 @@
 #' @param varname new column name with the values from the combined columns  
 #' @returns new dataframe in long format 
 #' @examples
-#' long_form(data, "valuex")
-#' long_form(patientdata, "all_patients")
+#' df <- data.frame(
+#'   iso = c("CA", "US"),
+#'   X1960 = c(10, 20),
+#'   X1961 = c(11, 21))
+#' long_form(df, "MMR")
+#' @export
 
 long_form <- function(x, varname) {
     x|>
-    pivot_longer(cols = starts_with("X"), #selecting all cols that start with x 
+    tidyr::pivot_longer(cols = starts_with("X"), #selecting all cols that start with x 
                  names_to = "year", #creating new variable called Year 
                  names_prefix = "X", # removes X from year column (so only numerical shows)
                  values_to = varname)|>
-        mutate(year = as.numeric(year)) |>
-        select(iso,year, all_of(varname)) #values of maternal mortality 
+        dplyr::mutate(year = as.numeric(year)) |>
+        dplyr::select(iso,year, all_of(varname)) #values of maternal mortality 
 } 
 

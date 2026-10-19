@@ -18,6 +18,9 @@ new dataframe in long format
 This function pivots pivot world bank style data into longer form. Therefore it increases the number of rows and decreases the number of cols. Making it easier to work with for graphing, grouping data, and such.
 }
 \examples{
-long_form(data, "valuex")
-long_form(patientdata, "all_patients")
+df <- data.frame(
+  iso = c("CA", "US"),
+  X1960 = c(10, 20),
+  X1961 = c(11, 21))
+long_form(df, "MMR")
 }
