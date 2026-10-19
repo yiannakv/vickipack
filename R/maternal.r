@@ -3,7 +3,7 @@
 #' Contains maternal mortality ratios from years 1960 to 2021 for 186 countries. Values represent the number of maternal deaths
 #' per 100,000 live births. This is sourced from the world bank. 
 #'
-#' @format ## `maternal_data`
+#' @format ## `maternal`
 #' A data frame with 186 rows and 22 columns:
 #' \describe{
 #'   \item{iso}{3 letter ISO country codes}
@@ -12,5 +12,4 @@
 #'   ...
 #' }
 #' @source https://data.worldbank.org/indicator/SH.STA.MMRT
-"maternal_data"
-
+"maternal"
