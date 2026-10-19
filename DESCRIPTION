@@ -1,8 +1,8 @@
 Package: vickipack
-Title: What the Package Does (One Line, Title Case)
+Title: Pivots world bank data tables from wide to long form
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+    person("Vicki", "Yiannakis", , "vicki.yiannakis@mail.utoronto.ca", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Config/roxygen2/version: 8.1.1
