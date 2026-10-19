@@ -6,8 +6,9 @@
 #' @examples
 #' long_form(data, "valuex")
 #' long_form(patientdata, "all_patients")
-#' @import dplyr
 #' @import tidyr
+#' @import dplyr
+#' @import ggplot2
 
 
 long_form <- function(x, varname) {
