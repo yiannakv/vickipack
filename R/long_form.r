@@ -13,11 +13,11 @@
 
 long_form <- function(x, varname) {
     x|>
-    tidyr::pivot_longer(cols = starts_with("X"), #selecting all cols that start with x 
+    tidyr::pivot_longer(cols = dplyr::starts_with("X"), #selecting all cols that start with x 
                  names_to = "year", #creating new variable called Year 
                  names_prefix = "X", # removes X from year column (so only numerical shows)
                  values_to = varname)|>
         dplyr::mutate(year = as.numeric(year)) |>
-        dplyr::select(iso,year, all_of(varname)) #values of maternal mortality 
+        dplyr::select(iso,year, dplyr::all_of(varname)) #values of maternal mortality 
 } 
 
